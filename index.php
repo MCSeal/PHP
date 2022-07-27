@@ -10,8 +10,7 @@
     <h1>PHP Workshop</h1>
     <h2>Follow each link to a new page!</h2>
     <li><a href="basics.php">basics of php</a></li>
-    <li><a href="loops.php">loops</a></li>
-    <li><a href="statements.php">statements</a></li>
+
     <br>
     <br><br>
 <?php
