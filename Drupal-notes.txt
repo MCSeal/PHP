@@ -1,0 +1,190 @@
+Drupal
+
+
+lots of things use it
+
+drupal entities is anything that has fields.... content,blocks,taxonomy,users,media,comments,contactforms all entities...
+
+Variables start with $
+
+PHP has the following types:
+
+bool boolean values (true/false)
+int integer numbers (no decimals)
+float floating-point numbers (decimals)
+string strings
+array arrays
+object objects
+null a value that means “no value assigned”
+
+var_dump() is one of the essential tools in your PHP debugging toolbelt.
+
+// Logical XOR (one of the two is true, but not both)
+
+
+we can concatenate two strings using the . operator:
+
+$firstName = 'Flavio';
+$lastName = 'Copes';
+
+$fullName = $firstName . ' ' . $lastName;
+
+We can check the length of a string using the strlen() function:
+
+Here is a brief non-comprehensive list just to show you the possibilities:
+
+trim() strips white space at the beginning and end of a string
+strtoupper() makes a string uppercase
+strtolower() makes a string lowercase
+ucfirst() makes the first character uppercase
+strpos() finds the firsts occurrence of a substring in the string
+explode() to split a string into an array
+implode() to join array elements in a string
+
+
+round() to round a decimal number, up/down depending if the value is > 0.5 or smaller
+ceil() to round a a decimal number up
+floor() to round a decimal number down
+rand() generates a random integer
+min() finds the lowest number in the numbers passed as arguments
+max() finds the highest number in the numbers passed as arguments
+is_nan() returns true if the number is not a number
+
+
+$list = ['a', 'b'];
+$list[] = 'c';
+
+You can use array_unshift() to add the item at the beginning of the array instead:
+
+As with strings and numbers, PHP provides lots of very useful functions for arrays. We’ve seen count(), in_array(), array_search(), let’s see some more:
+
+is_array() to check if a variable is an array
+array_unique() to remove duplicate values from an array
+array_search() to search a value in the array and returns the key
+array_reverse() to reverse an array
+array_reduce() to reduce an array to a single value using a callback function
+array_map() to apply a callback function to each item in the array. Typically used to create a new array by modifying the values of an existing array, without altering that.
+array_filter() to filter an array to a single value using a callback function
+max() to get the maximum value contained in the array
+min() to get the minimum value contained in the array
+array_rand() to get a random item from the array
+array_count_values() to count all the values in the array
+implode() to turn an array into a string
+array_pop() to remove the last item of the array and return its value
+array_shift() same as array_pop() but removes the first item instead of the last
+sort() to sort an array
+rsort() to sort an array in reversing order
+array_walk() similarly to array_map() does something for every item in the array, but in addition it can change values in the existing array
+
+ssociative arrays
+So far we’ve used arrays with an incremental, numeric index: 0, 1, 2…
+
+You can also use arrays with named indexes (keys), and we call them associative arrays:
+
+$list = ['first' => 'a', 'second' => 'b'];
+
+$list['first'] //'a'
+$list['second'] //'b'
+We have some functions especially useful for associative arrays:
+
+array_key_exists() to check if a key exists in the array
+array_keys() to get all the keys from the array
+array_values() to get all the values from the array
+asort() to sort an associative array by value
+arsort() to sort an associative array in descending order by value
+ksort() to sort an associative array by key
+krsort() to sort an associative array in descending order by key
+
+We use that when we have a variable that could have a few different values, and we don’t have to have a long if / elseif block:
+
+$age = 17
+
+switch($age) {
+  case 15:
+		echo 'You are 15';
+    break;
+  case 16:
+		echo 'You are 16';
+
+
+
+We have a few different kinds of loops in PHP: while, do while, for, foreach.
+
+We can optionally set the type of parameters:
+
+function sendEmail(string $to, string $subject, string $body) {
+  //...
+}
+
+
+switch($variable) {
+  case 'some case'
+  echo'bubs'
+
+  case 'other case'
+  echo'othjerstuff'
+}
+
+String function
+
+ucFirst ... capitalizes first letter 
+ucwords  capitalizes all 
+str_repeat   repeat x, amount
+trim .... takes off empty spaces of a string
+ltrim ... left empty string
+rtrim ... right empty string 
+
+
+date and time 
+
+        echo "<h1>Date and time manipulation</h1>";
+        $date = date('Y-m-d');
+        echo "<p>Today is $date</p>";
+        //shows date in a different format
+        $time = date('H:i:s');
+        echo "<p>The time is $time</p>";
+        // time in hours, minutes, seconds
+        $timestamp = time();
+        echo "<p>The timestamp is $timestamp</p>";
+        // will show bunch of numbers probably after the 1970 date epocal
+
+
+can do $date = getDate();
+this is an array object
+echo %date[mday or mon or year] 
+for day/month / year in that order
+
+
+---- functions
+
+    function sayHello(){
+        echo "<p>Hello World</p>";
+    }
+
+    function someFunk($num, $multiply){
+
+    }
+
+//the & allows you to modify the value 
+        function someFunk(&$NUM){
+      
+    }
+
+
+
+To return a value in PHP ....
+return....
+
+
+
+include..... --------------------------
+
+<?php 
+include 'includes/header.php';
+
+?>
+
+
+require is the same thing.... include if it doesnt exist it will be cool with
+
+require it wont load without the file/stuff

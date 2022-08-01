@@ -8,6 +8,7 @@
 </head>
 <body>
     <?php 
+    include 'includes/header.php';
     echo '<h2>If statements</h2>';
     
     $grade = 49;
@@ -105,5 +106,47 @@
 
     ?>
 
-</body>
-</html>
+
+<!-- Date and time manipulation -->
+    
+
+    <?php 
+        echo "<h1>Date and time manipulation</h1>";
+        $date = date('Y-m-d');
+        echo "<p>Today is $date</p>";
+        //shows date in a different format
+        $time = date('H:i:s');
+        echo "<p>The time is $time</p>";
+        // time in hours, minutes, seconds
+        $timestamp = time();
+        echo "<p>The timestamp is $timestamp</p>";
+        // will show bunch of numbers probably after the unix 1970 date epocal
+
+
+    ?>
+
+
+<!-- USER FUNCTIONS -->
+    
+
+<?php 
+    echo "<h1>User functions</h1>";
+    function sayHello(){
+        echo "<p>Hello World</p>";
+    }
+    sayHello();
+
+
+    function maththing($num1, $num2){
+        $sum = $num1 + $num2;
+        return $sum;
+    }
+
+    $result = maththing(10,20);
+    echo("<p>The sum is $result</p>");
+
+    ?>
+
+<?php
+    include 'includes/footer.php';
+?>
